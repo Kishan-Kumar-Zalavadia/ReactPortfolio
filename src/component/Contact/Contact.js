@@ -71,7 +71,7 @@ const Contact = () => {
             </div>
 
             <div className='right box_shodow'>
-              <form onSubmit={formSubmit} name="contactUs" method="POST" data-netlify="true">
+              <form  name="contactUs"  data-netlify="true">
                 <div className='f_flex'>
                   <div className='input row'>
                     <span>YOUR NAME</span>
