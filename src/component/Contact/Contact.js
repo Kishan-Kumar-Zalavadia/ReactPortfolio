@@ -98,6 +98,29 @@ const Contact = () => {
                   SEND MESSAGE <i className='fa fa-long-arrow-right'></i>
                 </button>
               </form>
+              <form name="contactUs" method="POST" data-netlify="true">
+        <div className="fields">
+          <div className="field name">
+            <input type="text" name="Name" placeholder="Name" required />
+          </div>
+          <div className="field email">
+            <input type="email" name="Email" placeholder="Email" required />
+          </div>
+        </div>
+        <div className="field">
+          <input type="text" name="Subject" placeholder="Subject" required />
+        </div>
+        <div className="field textarea">
+          <textarea name="Description" id cols={30} rows={10} placeholder="Description" required defaultValue={""} />
+        </div>
+        <div className="field">
+          <div data-netlify-recaptcha="true" />
+        </div>
+        <br />
+        <div className="button">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
             </div>
           </div>
         </div>
