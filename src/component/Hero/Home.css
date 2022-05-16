@@ -1,0 +1,132 @@
+.hero {
+  position: relative;
+}
+.hero h3 {
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.hero h1 span {
+  color: #ff014f;
+}
+.hero h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ff014f;
+}
+.hero h2 span {
+  color: black;
+}
+.hero p {
+  color: #878e99;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 30px;
+}
+.hero_btn {
+  margin-top: 20%;
+  flex-direction: column;
+}
+.hero_btn h4 {
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #43474b;
+  font-size: 15px;
+  margin: 30px 0 30px 0;
+}
+.hero_btn button {
+  margin: 15px;
+}
+.hero_btn i {
+  font-size: 20px;
+}
+
+.hero_btn button img {
+  width: 30px;
+  height: 30px;
+}
+.hero .left {
+  margin-right: 10%;
+}
+.hero .right {
+  width: 40%;
+}
+.hero .right_img {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  border-radius: 10px;
+  height: 530px;
+  width: 0vw;
+  margin-top: 20%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.hero .right_img img {
+  bottom: 0;
+  width: 500px;
+}
+.resume_btn{
+  margin-top: 30px;
+}
+.Welcoming{
+  display: none;
+}
+@media (max-width: 768px) {
+  .hero .container{
+    margin-top: 30px;
+  }
+  .hero .right,
+  .hero .left {
+    width: auto;
+    margin: 0px 20px;
+  }
+  .hero .f_flex {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .hero .right_img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+  .hero h1{
+    font-size: 40px;
+  }
+  .hero h2{
+    font-size: 40px;
+  }
+  .Welcoming{
+    display: block;
+    margin: 0 10px;
+    margin-top: 20px;
+  }
+  .hero .container .left h1,.hero .container .left h2,.hero .container .left h3{
+    display: none;
+  }
+@media (max-width: 572px) {
+  .hero .right_img img{
+    width: 100%;
+  }
+  .hero .right_img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+  .hero h1{
+    font-size: 35px;
+  }
+  .hero h2{
+    font-size: 35px;
+  }
+}
+}
