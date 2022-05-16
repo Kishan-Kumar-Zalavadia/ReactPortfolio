@@ -43,7 +43,8 @@ const Header = () => {
                 <a href='#contact'>contact</a>
               </li> */}
               <li>
-                <button className='home-btn'>CONTACT NOW</button>
+                
+                <a href='#contact'><button className='home-btn'>CONTACT NOW</button></a>
               </li>
             </ul>
 
