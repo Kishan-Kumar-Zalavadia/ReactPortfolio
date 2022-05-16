@@ -21,7 +21,7 @@ const Contact = () => {
     })
   }
 
-  const formSubmit = (event) => {
+ /* const formSubmit = (event) => {
     event.preventDefault()
     alert(
       `My name is ${data.fullname}. 
@@ -31,7 +31,7 @@ const Contact = () => {
 	Here is my message I want to say : ${data.message}. 
 	`
     )
-  }
+  }*/
   return (
     <>
       <section className='Contact' id='contact'>
