@@ -99,7 +99,7 @@ const Contact = () => {
                   SEND MESSAGE <i className='fa fa-long-arrow-right'></i>
                 </button>
               </form> */}
-              <form name="contactUs" method="POST" data-netlify="true">
+              <form name="contactUs" netlify>
                 <div className="fields">
                   <div className="field name">
                     <input type="text" name="Name" placeholder="Name" required />
