@@ -8,7 +8,8 @@ const Contact = () => {
     phone: "",
     email: "",
     subject: "",
-    message: "",})
+    message: "",
+  })
 
   const InputEvent = (event) => {
     const { name, value } = event.target
@@ -21,17 +22,17 @@ const Contact = () => {
     })
   }
 
- /* const formSubmit = (event) => {
-    event.preventDefault()
-    alert(
-      `My name is ${data.fullname}. 
-	My phone number is ${data.phone}. 
-	My email address is ${data.email}. 
-	My Subject on  ${data.subject}. 
-	Here is my message I want to say : ${data.message}. 
-	`
-    )
-  }*/
+  /* const formSubmit = (event) => {
+     event.preventDefault()
+     alert(
+       `My name is ${data.fullname}. 
+   My phone number is ${data.phone}. 
+   My email address is ${data.email}. 
+   My Subject on  ${data.subject}. 
+   Here is my message I want to say : ${data.message}. 
+   `
+     )
+   }*/
   return (
     <>
       <section className='Contact' id='contact'>
@@ -55,40 +56,40 @@ const Contact = () => {
                   <p>Email: kishankumar31032001@gmail.com</p> <br />
                   <span>FIND WITH ME</span>
                   <div className='button f_flex'>
-                  <a target="_blank" href="https://www.linkedin.com/in/kishan-kumar-zalavadia/">
-                    <button className='btn_shadow'>
-                      <i class='fab fa-linkedin-in'></i>
-                    </button>
-                  </a>
-                  <a target="_blank" href="https://github.com/Kishan-Kumar-Zalavadia">
-                    <button className='btn_shadow'>
-                      <i class='fab fa-github'></i>
-                    </button>
-                  </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/kishan-kumar-zalavadia/">
+                      <button className='btn_shadow'>
+                        <i class='fab fa-linkedin-in'></i>
+                      </button>
+                    </a>
+                    <a target="_blank" href="https://github.com/Kishan-Kumar-Zalavadia">
+                      <button className='btn_shadow'>
+                        <i class='fab fa-github'></i>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className='right box_shodow'>
-              <form  name="contactUs"  data-netlify="true">
+              {/* <form name="contactUs" data-netlify="true">
                 <div className='f_flex'>
                   <div className='input row'>
                     <span>YOUR NAME</span>
-                    <input type='text' name='fullname' value={data.fullname} onChange={InputEvent} required/>
+                    <input type='text' name='fullname' value={data.fullname} onChange={InputEvent} required />
                   </div>
                   <div className='input row'>
                     <span>PHONE NUMBER </span>
-                    <input type='number' name='phone' value={data.phone} onChange={InputEvent} required/>
+                    <input type='number' name='phone' value={data.phone} onChange={InputEvent} required />
                   </div>
                 </div>
                 <div className='input'>
                   <span>EMAIL </span>
-                  <input type='email' name='email' value={data.email} onChange={InputEvent} required/>
+                  <input type='email' name='email' value={data.email} onChange={InputEvent} required />
                 </div>
                 <div className='input'>
                   <span>SUBJECT </span>
-                  <input type='text' name='subject' value={data.subject} onChange={InputEvent} required/>
+                  <input type='text' name='subject' value={data.subject} onChange={InputEvent} required />
                 </div>
                 <div className='input'>
                   <span>YOUR MESSAGE </span>
@@ -97,30 +98,30 @@ const Contact = () => {
                 <button className='btn_shadow' type="submit">
                   SEND MESSAGE <i className='fa fa-long-arrow-right'></i>
                 </button>
-              </form>
+              </form> */}
               <form name="contactUs" method="POST" data-netlify="true">
-        <div className="fields">
-          <div className="field name">
-            <input type="text" name="Name" placeholder="Name" required />
-          </div>
-          <div className="field email">
-            <input type="email" name="Email" placeholder="Email" required />
-          </div>
-        </div>
-        <div className="field">
-          <input type="text" name="Subject" placeholder="Subject" required />
-        </div>
-        <div className="field textarea">
-          <textarea name="Description" id cols={30} rows={10} placeholder="Description" required defaultValue={""} />
-        </div>
-        <div className="field">
-          <div data-netlify-recaptcha="true" />
-        </div>
-        <br />
-        <div className="button">
-          <button type="submit">Send Message</button>
-        </div>
-      </form>
+                <div className="fields">
+                  <div className="field name">
+                    <input type="text" name="Name" placeholder="Name" required />
+                  </div>
+                  <div className="field email">
+                    <input type="email" name="Email" placeholder="Email" required />
+                  </div>
+                </div>
+                <div className="field">
+                  <input type="text" name="Subject" placeholder="Subject" required />
+                </div>
+                <div className="field textarea">
+                  <textarea name="Description" id cols={30} rows={10} placeholder="Description" required defaultValue={""} />
+                </div>
+                <div className="field">
+                  <div data-netlify-recaptcha="true" />
+                </div>
+                <br />
+                <div className="button">
+                  <button type="submit" className='btn_shadow'>Send Message</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
