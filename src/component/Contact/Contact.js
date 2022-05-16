@@ -71,7 +71,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className='right box_shodow'>
+            {/* <div className='right box_shodow'>
               {/* <form name="contactUs" data-netlify="true">
                 <div className='f_flex'>
                   <div className='input row'>
@@ -98,7 +98,7 @@ const Contact = () => {
                 <button className='btn_shadow' type="submit">
                   SEND MESSAGE <i className='fa fa-long-arrow-right'></i>
                 </button>
-              </form> */}
+              </form> 
               <form name="contactUs" method="POST" data-netlify="true">
                 <div className="fields">
                   <div className="field name">
@@ -122,18 +122,8 @@ const Contact = () => {
                   <button type="submit" className='btn_shadow'>Send Message</button>
                 </div>
               </form>
-              <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-            </div>
+              
+            </div> */}
           </div>
         </div>
       </section>
