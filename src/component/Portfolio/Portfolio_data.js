@@ -14,7 +14,7 @@ const Portfolio_data = [
     totalLike: "750",
     title: "My Portfolio Website-2",
     image: "./image/portfolio2.png",
-    link: "https://kishankumar.netlify.app/",
+    link: "https://kishankumarsite.netlify.app",
   },
   {
     id: 3,
