@@ -48,5 +48,13 @@ const Portfolio_data = [
     image: "./image/stickynotes.png",
     link: "https://stickthenote.netlify.app/",
   },
+  {
+    id: 7,
+    category: "Expense Tracker",
+    totalLike: "690",
+    title: "App for Expense Tracking",
+    image: "./image/expenseTracker.jpg",
+    link: "https://mymoneymoney.netlify.app/",
+  },
 ]
 export default Portfolio_data
