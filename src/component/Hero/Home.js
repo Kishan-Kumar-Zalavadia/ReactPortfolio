@@ -7,6 +7,8 @@ import skill3 from "../pic/skill3.png"
 import skill4 from "../pic/skill4.png"
 import skill5 from "../pic/skill5.png"
 import skill6 from "../pic/skill6.png"
+import skill7 from "../pic/skill7.png"
+import skill8 from "../pic/skill8.png"
 import { Typewriter } from "react-simple-typewriter"
 import resume from "../pic/kishanresume.pdf"
 
