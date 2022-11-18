@@ -87,6 +87,12 @@ const Home = () => {
                 <button className='btn_shadow'>
                   <img src={skill6} alt='' />
                 </button>
+                <button className='btn_shadow'>
+                  <img src={skill7} alt='' />
+                </button>
+                <button className='btn_shadow'>
+                  <img src={skill8} alt='' />
+                </button>
               </div>
             </div>
           </div>
