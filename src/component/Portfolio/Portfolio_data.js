@@ -56,5 +56,13 @@ const Portfolio_data = [
     image: "./image/expenseTracker.jpg",
     link: "https://mymoneymoney.netlify.app/",
   },
+  {
+    id: 8,
+    category: "Weather App",
+    totalLike: "690",
+    title: "Realtime Weather Status",
+    image: "./image/weatherApp.jpg",
+    link: "https://myweathercityapp.netlify.app/",
+  },
 ]
 export default Portfolio_data
