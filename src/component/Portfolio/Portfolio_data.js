@@ -64,5 +64,13 @@ const Portfolio_data = [
     image: "./image/weatherApp.jpg",
     link: "https://myweathercityapp.netlify.app/",
   },
+  {
+    id: 9,
+    category: "Tic-Tac-Toe Game",
+    totalLike: "690",
+    title: "Tic-Tac-Toe Game",
+    image: "./image/tic-tac-toe.jpg",
+    link: "https://ourtictactoe.netlify.app/",
+  }
 ]
 export default Portfolio_data
