@@ -9,6 +9,7 @@ import skill5 from "../pic/skill5.png"
 import skill6 from "../pic/skill6.png"
 import skill7 from "../pic/skill7.png"
 import skill8 from "../pic/skill8.png"
+import skill9 from "../pic/skill9.png"
 import { Typewriter } from "react-simple-typewriter"
 import resume from "../pic/kishanresume.pdf"
 
@@ -94,6 +95,9 @@ const Home = () => {
                 </button>
                 <button className='btn_shadow'>
                   <img src={skill8} alt='' />
+                </button>
+                <button className='btn_shadow'>
+                  <img src={skill9} alt='' />
                 </button>
               </div>
             </div>
