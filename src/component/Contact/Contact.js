@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import contact1 from "./contact1.png"
-import "./Contact.css"
+import React, { useState } from "react";
+import contact1 from "./contact1.png";
+import "./Contact.css";
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -9,18 +9,18 @@ const Contact = () => {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   const InputEvent = (event) => {
-    const { name, value } = event.target
+    const { name, value } = event.target;
 
     setData((preVal) => {
       return {
         ...preVal,
         [name]: value,
-      }
-    })
-  }
+      };
+    });
+  };
 
   /* const formSubmit = (event) => {
      event.preventDefault()
@@ -35,41 +35,53 @@ const Contact = () => {
    }*/
   return (
     <>
-      <section className='Contact' id='contact'>
-        <div className='container top'>
-          <div className='heading text-center'>
+      <section className="Contact" id="contact">
+        <div className="container top">
+          <div className="heading text-center">
             <h4>CONTACT</h4>
             <h1>Contact With Me</h1>
           </div>
 
-          <div className='content d_flex'>
-            <div className='left'>
-              <div className='box box_shodow'>
-                <div className='img'>
-                  <img src={contact1} alt='' />
+          <div className="content d_flex">
+            <div className="left">
+              <div className="box box_shodow">
+                <div className="left_img">
+                  <img src={contact1} alt="" />
                 </div>
-                <div className='details'>
-                  <h1>Kishan Kumar</h1>
-                  <p>Software Fresher</p>
-                  <p>I am available for freelance work. Connect with me via.</p> <br />
+                <div className="details">
+                  <h1>Kishan Kumar Zalavadia</h1>
+                  <p>Software Engineer</p>
+                  <p>I would love to connect with you.</p> <br />
                   {/* <p>Phone: +01234567890</p> */}
                   <p>Email: kishankumar31032001@gmail.com</p> <br />
                   <span>FIND WITH ME</span>
-                  <div className='button f_flex'>
-                    <a target="_blank" href="https://www.linkedin.com/in/kishan-kumar-zalavadia/">
-                      <button className='btn_shadow'>
-                        <i class='fab fa-linkedin-in'></i>
+                  <div className="button f_flex">
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/in/kishan-kumar-zalavadia/"
+                    >
+                      <button className="btn_shadow">
+                        <i class="fab fa-linkedin-in"></i>
                       </button>
                     </a>
-                    <a target="_blank" href="https://github.com/Kishan-Kumar-Zalavadia">
-                      <button className='btn_shadow'>
-                        <i class='fab fa-github'></i>
+                    <a
+                      target="_blank"
+                      href="https://github.com/Kishan-Kumar-Zalavadia"
+                    >
+                      <button className="btn_shadow">
+                        <i class="fab fa-github"></i>
                       </button>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* <div className="right box_shodow">
+            <div className="right_img">
+                  <img src={contact1} alt="" />
+                </div>
+            </div> */}
 
             {/* <div className='right box_shodow'>
               {/* <form name="contactUs" data-netlify="true">
@@ -128,7 +140,7 @@ const Contact = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
