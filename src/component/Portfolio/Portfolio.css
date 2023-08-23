@@ -4,7 +4,7 @@
 .Portfolio .box {
   border-radius: 10px;
   position: relative;
-  height: 60vh;
+  height: auto;
 }
 .Portfolio .box:hover {
   background: none;
@@ -12,7 +12,7 @@
 }
 
 .Portfolio .img {
-  height: 200px;
+  height: auto;
   overflow: hidden;
   transition: 0.5s;
 }
@@ -146,7 +146,7 @@ body.active-modal {
   .modal .modal-img {
     margin: 50px 0 50px 0;
   }
-  .modal-content{ 
+  .modal-content {
     display: flex;
     flex-direction: column;
   }
@@ -154,16 +154,15 @@ body.active-modal {
   .modal .left {
     padding: 0;
   }
-
 }
 @media (max-width: 600px) {
-  .Portfolio .content{
+  .Portfolio .content {
     display: flex;
     flex-direction: column;
   }
   .Portfolio .box {
     border-radius: 10px;
     position: relative;
-    height: 70vh;
+    /* height: 70vh; */
   }
 }
