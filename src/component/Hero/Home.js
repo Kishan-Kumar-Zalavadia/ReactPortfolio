@@ -11,7 +11,7 @@ import skill7 from "../pic/skill7.png"
 import skill8 from "../pic/skill8.png"
 import skill9 from "../pic/skill9.png"
 import { Typewriter } from "react-simple-typewriter"
-import resume from "../pic/kishanresume.pdf"
+import resume from "../pic/kishanresume-2.pdf"
 
 const Home = () => {
   return (
