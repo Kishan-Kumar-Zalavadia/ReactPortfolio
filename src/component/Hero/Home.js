@@ -46,7 +46,7 @@ const Home = () => {
 
             <p>I am an enthusiastic engineering fresher who is capable of using technical skills for the betterment of the organization. A bachelor’s degree in Software Engineering has enhanced my software skills and looking forward to work in a competitive environment that enhances overall learning.</p>
             {/* <button className='btn_shadow resume_btn'>Resume</button> */}
-            <a href={resume} target='_blank'><button className='btn_shadow resume_btn'>Resume</button></a>
+           /* <a href={resume} target='_blank'><button className='btn_shadow resume_btn'>Resume</button></a> */
             <div className='hero_btn d_flex'>
               <div className='col_1'>
                 <h4>FIND WITH ME</h4>
