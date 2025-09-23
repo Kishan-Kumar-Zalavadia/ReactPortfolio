@@ -1,0 +1,28 @@
+.heading-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0; /* space around the heading */
+}
+
+.heading-card h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.heading-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #66b2ff, #99ccff);
+  border-radius: 2px;
+  margin-top: 8px;
+  transition: width 0.3s ease;
+}
+
+.heading-card:hover .heading-underline {
+  width: 120px;
+}
