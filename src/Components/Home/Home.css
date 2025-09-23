@@ -1,0 +1,122 @@
+.home-section {
+  width: 100%;
+  height: 100%;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* align cards to top */
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Left card: intro */
+.home-intro {
+  flex: 1 1 calc(80% - 5px); /* 50% minus half the gap */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Right card: image */
+.home-image {
+  flex: 1 1 calc(20% - 5px); /* 50% minus half the gap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.home-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home-image {
+    display: none;
+    order: -1; /* image on top */
+    flex: 0 0 auto;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .home-intro {
+    flex: 0 0 100%;
+  }
+}
+
+/* Left Card - Asthetic Look  */
+
+.home-intro {
+  flex: 1 1 calc(50% - 5px);
+  padding: 30px 25px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: var(--text-color); /* text color from variables */
+}
+
+.home-intro h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: var(--link-color); /* accent color from variables */
+}
+
+.home-intro h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+  color: var(--text-color);
+}
+
+.home-intro p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #dcdcdc; /* you could make this a variable too if needed */
+}
+
+.home-intro h3,
+.home-intro h4,
+.home-intro p {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.home-intro h3 {
+  animation-delay: 0.2s;
+}
+
+.home-intro h4 {
+  animation-delay: 0.4s;
+}
+
+.home-intro p {
+  animation-delay: 0.6s;
+}
+
+/* Fade-in animation from bottom */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

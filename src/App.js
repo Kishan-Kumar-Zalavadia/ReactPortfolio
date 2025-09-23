@@ -11,13 +11,14 @@ import React from "react";
 import "./App.css";
 import GlassCard from "./Elements/GlassCard/GlassCard";
 import NavBar from "./Components/NavBar/NavBar";
+import Home from "./Components/Home/Home";
 
 const App = () => {
   return (
     <>
       <div className="main-container">
         <NavBar />
-        {/* Other sections will go here */}
+        <Home />
       </div>
     </>
   );
