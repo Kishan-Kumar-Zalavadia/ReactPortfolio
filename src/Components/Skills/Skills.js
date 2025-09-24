@@ -7,7 +7,8 @@ import Heading from "../../Elements/Heading/Heading";
 const Skills = () => {
   return (
     <section className="skills-section" id="skills">
-      <Heading title={"Skills"}></Heading>
+      <Heading title={"Skills"} />
+
       <div className="skills-container">
         {/* Languages */}
         <GlassCard className="skills-card">
@@ -38,21 +39,25 @@ const Skills = () => {
         {/* Concepts */}
         <GlassCard className="skills-card">
           <h3>Concepts</h3>
-          <ul>
+          <div className="skills-badges">
             {concepts.map((concept, index) => (
-              <li key={index}>{concept}</li>
+              <div key={index} className="badge">
+                {concept}
+              </div>
             ))}
-          </ul>
+          </div>
         </GlassCard>
 
         {/* Soft Skills */}
         <GlassCard className="skills-card">
           <h3>Soft Skills</h3>
-          <ul>
+          <div className="skills-badges">
             {softSkills.map((skill, index) => (
-              <li key={index}>{skill}</li>
+              <div key={index} className="badge">
+                {skill}
+              </div>
             ))}
-          </ul>
+          </div>
         </GlassCard>
       </div>
     </section>
