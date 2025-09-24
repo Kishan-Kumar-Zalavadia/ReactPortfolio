@@ -13,6 +13,7 @@ import GlassCard from "./Elements/GlassCard/GlassCard";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Skills from "./Components/Skills/Skills";
+import Education from "./Components/Education/Education";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <NavBar />
         <Home />
         <Skills />
+        <Education />
       </div>
     </>
   );
