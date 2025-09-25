@@ -2,7 +2,23 @@ import React, { useState } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
 import experienceData from "./experienceData";
+import { languages, frameworks } from "../Skills/Data/skillsData";
 import "./Experience.css";
+
+// Utility: get image for skill
+const getSkillImage = (skillName) => {
+  const lang = languages.find(
+    (l) => l.name.toLowerCase() === skillName.toLowerCase()
+  );
+  if (lang) return lang.img;
+
+  const fw = frameworks.find(
+    (f) => f.name.toLowerCase() === skillName.toLowerCase()
+  );
+  if (fw) return fw.img;
+
+  return null;
+};
 
 const Experience = () => {
   const [activeExperience, setActiveExperience] = useState(null);
@@ -32,12 +48,20 @@ const Experience = () => {
               <p className="location">{exp.location}</p>
 
               {/* Skills badges */}
-              <div className="skills-badges-container">
-                {exp.skills.map((skill, i) => (
-                  <span key={i} className="skill-badge">
-                    {skill}
-                  </span>
-                ))}
+              <div className="experience-skills-card">
+                <div className="skills-badges">
+                  {exp.skills.map((skill, i) => {
+                    const img = getSkillImage(skill);
+                    return (
+                      <div key={i} className="badge">
+                        {img && (
+                          <img src={img} alt={skill} className="badge-icon" />
+                        )}
+                        {skill}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
               <button
