@@ -14,6 +14,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Skills from "./Components/Skills/Skills";
 import Education from "./Components/Education/Education";
+import Experiences from "./Components/Experience/Experience";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Home />
         <Skills />
         <Education />
+        <Experiences />
       </div>
     </>
   );
