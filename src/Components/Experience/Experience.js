@@ -22,13 +22,19 @@ const getSkillImage = (skillName) => {
 
 const Experience = () => {
   const [activeExperience, setActiveExperience] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+  // Determine which experiences to show
+  const displayedExperiences = showAll
+    ? experienceData
+    : experienceData.slice(0, 3);
 
   return (
     <div className="experience-section" id="experience">
       <Heading title={"Experience"} />
 
       <div className="experience-timeline">
-        {experienceData.map((exp, index) => (
+        {displayedExperiences.map((exp, index) => (
           <div
             key={index}
             className={`timeline-item ${exp.latest ? "latest-card" : ""}`}
@@ -74,6 +80,15 @@ const Experience = () => {
           </div>
         ))}
       </div>
+
+      {/* Toggle button for more/less */}
+      {experienceData.length > 3 && (
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <button className="details-btn" onClick={() => setShowAll(!showAll)}>
+            {showAll ? "View Less" : "View More"}
+          </button>
+        </div>
+      )}
 
       {/* Modal Popup */}
       {activeExperience && (
