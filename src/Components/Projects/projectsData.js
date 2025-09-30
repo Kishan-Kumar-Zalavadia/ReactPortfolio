@@ -80,6 +80,86 @@ const projectsData = [
     description:
       "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
   },
+
+  {
+    name: "Gaming Dashboard",
+    image: gamingImg,
+    link: "https://gamingdashboard.com",
+    github: "https://github.com/your-gaming-repo",
+    technologies: ["React", "Node.js", "CSS"],
+    description:
+      "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
+  },
+
+  {
+    name: "Gaming Dashboard",
+    image: gamingImg,
+    link: "https://gamingdashboard.com",
+    github: "https://github.com/your-gaming-repo",
+    technologies: ["React", "Node.js", "CSS"],
+    description:
+      "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
+  },
+
+  {
+    name: "Gaming Dashboard",
+    image: gamingImg,
+    link: "https://gamingdashboard.com",
+    github: "https://github.com/your-gaming-repo",
+    technologies: ["React", "Node.js", "CSS"],
+    description:
+      "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
+  },
+
+  {
+    name: "Gaming Dashboard",
+    image: gamingImg,
+    link: "https://gamingdashboard.com",
+    github: "https://github.com/your-gaming-repo",
+    technologies: ["React", "Node.js", "CSS"],
+    description:
+      "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
+  },
+
+  {
+    name: "Gaming Dashboard",
+    image: gamingImg,
+    link: "https://gamingdashboard.com",
+    github: "https://github.com/your-gaming-repo",
+    technologies: ["React", "Node.js", "CSS"],
+    description:
+      "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
+  },
+
+  {
+    name: "Gaming Dashboard",
+    image: gamingImg,
+    link: "https://gamingdashboard.com",
+    github: "https://github.com/your-gaming-repo",
+    technologies: ["React", "Node.js", "CSS"],
+    description:
+      "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
+  },
+
+  {
+    name: "Gaming Dashboard",
+    image: gamingImg,
+    link: "https://gamingdashboard.com",
+    github: "https://github.com/your-gaming-repo",
+    technologies: ["React", "Node.js", "CSS"],
+    description:
+      "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
+  },
+
+  {
+    name: "Gaming Dashboard",
+    image: gamingImg,
+    link: "https://gamingdashboard.com",
+    github: "https://github.com/your-gaming-repo",
+    technologies: ["React", "Node.js", "CSS"],
+    description:
+      "An interactive gaming dashboard to track scores, leaderboards, and real-time player stats, enhancing user engagement and game analytics.",
+  },
 ];
 
 export default projectsData;

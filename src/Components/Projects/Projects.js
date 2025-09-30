@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
 import { languages, frameworks } from "../Skills/Data/skillsData";
+import projectsData from "./projectsData"; // your projectsData.js
 import "./Projects.css";
-import projectsData from "./projectsData";
 
-// Utility: get image for skill
 const getSkillImage = (skillName) => {
   const lang = languages.find(
     (l) => l.name.toLowerCase() === skillName.toLowerCase()
@@ -22,13 +21,31 @@ const getSkillImage = (skillName) => {
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Determine number of projects to show based on screen width
+  let limit = 8; // desktop default
+  if (screenWidth <= 768) limit = 3; // mobile
+  else if (screenWidth < 960) limit = 4; // medium/tablet
+  else if (screenWidth < 1260) limit = 6; // medium/tablet
+
+  const displayedProjects = showAll
+    ? projectsData
+    : projectsData.slice(0, limit);
 
   return (
     <div className="projects-section" id="projects">
       <Heading title={"Projects"} />
 
       <div className="projects-grid">
-        {projectsData.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <GlassCard key={index} className="project-card">
             <img
               src={project.image}
@@ -37,7 +54,6 @@ const Projects = () => {
             />
             <h3 className="project-title">{project.name}</h3>
 
-            {/* Tech badges */}
             <div className="project-tech">
               {project.technologies.map((tech, i) => {
                 const img = getSkillImage(tech);
@@ -50,7 +66,6 @@ const Projects = () => {
               })}
             </div>
 
-            {/* Buttons */}
             <div className="project-buttons">
               <button
                 className="details-btn full-width"
@@ -89,6 +104,15 @@ const Projects = () => {
           </GlassCard>
         ))}
       </div>
+
+      {/* Toggle button for more/less */}
+      {projectsData.length > limit && (
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <button className="details-btn" onClick={() => setShowAll(!showAll)}>
+            {showAll ? "View Less" : "View More"}
+          </button>
+        </div>
+      )}
 
       {/* Modal */}
       {activeProject && (
