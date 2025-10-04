@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
+import Button from "../../Elements/Button/Button";
 import { languages, frameworks } from "../Skills/Data/skillsData";
-import projectsData from "./projectsData"; // your projectsData.js
+import projectsData from "./projectsData";
 import "./Projects.css";
 
 const getSkillImage = (skillName) => {
@@ -30,11 +31,11 @@ const Projects = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Determine number of projects to show based on screen width
-  let limit = 8; // desktop default
-  if (screenWidth <= 768) limit = 3; // mobile
-  else if (screenWidth < 960) limit = 4; // medium/tablet
-  else if (screenWidth < 1260) limit = 6; // medium/tablet
+  // Determine number of projects to show
+  let limit = 8;
+  if (screenWidth <= 768) limit = 3;
+  else if (screenWidth < 960) limit = 4;
+  else if (screenWidth < 1260) limit = 6;
 
   const displayedProjects = showAll
     ? projectsData
@@ -71,37 +72,31 @@ const Projects = () => {
             </div>
 
             <div className="project-buttons">
-              <button
-                className="details-btn full-width"
+              <Button
+                text="View Details"
+                type="primary"
+                fullWidth={true}
                 onClick={() => setActiveProject(project)}
-              >
-                View Details
-              </button>
+              />
 
               <div className="links-row">
                 {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`details-btn ${
-                      project.github ? "half-width" : "full-width"
-                    }`}
-                  >
-                    Live
-                  </a>
+                  <Button
+                    text="Live"
+                    type="primary"
+                    halfWidth={!!project.github}
+                    fullWidth={true}
+                    onClick={() => window.open(project.link, "_blank")}
+                  />
                 )}
                 {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`details-btn ${
-                      project.link ? "half-width" : "full-width"
-                    }`}
-                  >
-                    GitHub
-                  </a>
+                  <Button
+                    text="GitHub"
+                    type="primary"
+                    halfWidth={!!project.link}
+                    fullWidth={true}
+                    onClick={() => window.open(project.github, "_blank")}
+                  />
                 )}
               </div>
             </div>
@@ -109,12 +104,13 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Toggle button for more/less */}
       {projectsData.length > limit && (
         <div style={{ textAlign: "center", marginTop: "20px" }}>
-          <button className="details-btn" onClick={() => setShowAll(!showAll)}>
-            {showAll ? "View Less" : "View More"}
-          </button>
+          <Button
+            text={showAll ? "View Less" : "View More"}
+            type="primary"
+            onClick={() => setShowAll(!showAll)}
+          />
         </div>
       )}
 
@@ -123,6 +119,7 @@ const Projects = () => {
         <div className="modal-overlay" onClick={() => setActiveProject(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h3>{activeProject.name}</h3>
+
             <div className="modal-badges">
               {activeProject.technologies.map((tech, i) => {
                 const img = getSkillImage(tech);
@@ -134,13 +131,14 @@ const Projects = () => {
                 );
               })}
             </div>
+
             <p className="modal-description">{activeProject.description}</p>
-            <button
-              className="close-btn"
+
+            <Button
+              text="Close"
+              type="secondary"
               onClick={() => setActiveProject(null)}
-            >
-              Close
-            </button>
+            />
           </div>
         </div>
       )}
