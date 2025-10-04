@@ -17,7 +17,7 @@
 .heading-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #66b2ff, #99ccff);
+  background: linear-gradient(90deg, var(--link-color), var(--link-hover));
   border-radius: 2px;
   margin-top: 8px;
   transition: width 0.3s ease;
