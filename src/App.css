@@ -200,4 +200,11 @@ ul {
 
 li {
   list-style-type: none;
+  text-align: justify;
+  text-justify: inter-word; 
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word; 
 }
