@@ -1,0 +1,33 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* center content by default */
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--card-border);
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  gap: 6px;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 15px var(--card-shadow);
+  color: var(--link-hover);
+}
+
+.badge-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.full-width {
+  width: 100%;              /* stretch to full width */
+  justify-content: center;   /* center the content horizontally */
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import { languages, frameworks, concepts, softSkills } from "./skillsData";
+import Badge from "../../Elements/Badge/Badge";
 import "./Skills.css";
 import Heading from "../../Elements/Heading/Heading";
 
@@ -41,9 +42,7 @@ const Skills = () => {
           <h3>Concepts</h3>
           <div className="skills-badges">
             {concepts.map((concept, index) => (
-              <div key={index} className="badge">
-                {concept}
-              </div>
+              <Badge key={index} text={concept} fullWidth />
             ))}
           </div>
         </GlassCard>
@@ -53,9 +52,7 @@ const Skills = () => {
           <h3>Soft Skills</h3>
           <div className="skills-badges">
             {softSkills.map((skill, index) => (
-              <div key={index} className="badge">
-                {skill}
-              </div>
+              <Badge key={index} text={skill} fullWidth />
             ))}
           </div>
         </GlassCard>
