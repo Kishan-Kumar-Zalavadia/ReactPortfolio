@@ -188,17 +188,41 @@
 }
 
 .highlights {
-  list-style: disc;
-  padding-left: 22px;
-  margin-bottom: 22px;
+  list-style: none; /* remove default bullets */
+  padding-left: 0;  /* remove default padding */
+  margin: 0 0 22px 0;
+  text-align: left; 
 }
 
 .highlights li {
-  margin: 6px 0;
+  position: relative;
+  padding-left: 20px; /* space for custom dot */
+  margin: 8px 0;
   font-size: 0.95rem;
   color: var(--text-color);
   opacity: 0.9;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* Custom bullet dot */
+.highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--link-color);
+  box-shadow: 0 0 5px var(--link-color);
+  transition: all 0.3s ease;
+}
+
+.highlights li:hover::before {
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 8px var(--link-hover);
 }
 
 .highlights li:hover {
