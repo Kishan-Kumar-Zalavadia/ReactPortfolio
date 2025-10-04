@@ -6,7 +6,7 @@
 .home-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* align cards to top */
+  align-items: stretch; /* align cards to top */
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
@@ -88,6 +88,8 @@
   font-size: 1rem;
   line-height: 1.8;
   color: #dcdcdc; /* you could make this a variable too if needed */
+  text-align: justify;
+  text-justify: inter-word; 
 }
 
 .home-intro h3,
