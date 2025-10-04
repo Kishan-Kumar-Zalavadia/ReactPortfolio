@@ -1,0 +1,12 @@
+/* Components/ScrollIndicator/ScrollIndicator.css */
+
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: var(--link-color); /* primary color */
+  z-index: 2000;
+  transition: width 0.2s ease;
+  border-radius: 0 0 5px 5px;
+}

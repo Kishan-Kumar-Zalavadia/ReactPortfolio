@@ -7,6 +7,7 @@ import Education from "./Components/Education/Education";
 import Experiences from "./Components/Experience/Experience";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
+import ScrollIndicator from "./Elements/ScrollIndicator/ScrollIndicator";
 
 const App = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -32,6 +33,7 @@ const App = () => {
 
   return (
     <div className="main-container">
+      <ScrollIndicator />
       <NavBar />
       <Home />
       <Skills />
