@@ -1,6 +1,6 @@
 .contact-section {
   margin: 40px auto;
-  max-width: 600px;
+  max-width: 1000px;
   padding: 20px;
 }
 
@@ -11,68 +11,17 @@
   text-align: center;
 }
 
-.contact-note {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: var(--text-color);
-  text-align: center;
-}
-
-.contact-email {
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-  color: var(--link-color);
-}
-
+/* Buttons container */
 .contact-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
-.contact-btn {
-  flex: 1;
-  text-align: center;
-  padding: 12px 16px;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.gmail-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid var(--link-color);
-  color: var(--text-color);
-}
-
-.gmail-btn:hover {
-  background: var(--link-color);
-  color: #fff;
-  transform: scale(1.05);
-}
-
-.linkedin-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid var(--link-color);
-  color: var(--text-color);
-}
-
-.linkedin-btn:hover {
-  background: #0a66c2;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-.linkedin-icon, .gmail-icon {
+.btn-icon {
   width: 20px;
   height: 20px;
+  margin-right: 6px;
 }

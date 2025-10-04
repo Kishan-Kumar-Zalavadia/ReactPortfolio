@@ -1,6 +1,7 @@
 import React from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
+import Button from "../../Elements/Button/Button";
 import "./Contact.css";
 import linkedinLogo from "./ContactImage/linkedin.png";
 import gmailLogo from "./ContactImage/gmail.png";
@@ -10,30 +11,35 @@ const Contact = () => {
   const linkedinUrl = "https://www.linkedin.com/in/kishan-kumar-zalavadia/";
 
   return (
-    <div className="contact-section" id='contact-me'>
+    <div className="contact-section" id="contact-me">
       <Heading title={"Contact Me"} />
       <GlassCard>
         <p className="contact-note">
           I’m always excited to connect! Feel free to reach out through email or
           LinkedIn.
         </p>
-        <p className="contact-email">{email}</p>
-
         <div className="contact-buttons">
-          <a href={`mailto:${email}`} className="contact-btn gmail-btn">
-            <img src={gmailLogo} alt="LinkedIn" className="gmail-icon" />
-            Mail Me
-          </a>
+          <Button
+            text={
+              <>
+                <img src={gmailLogo} alt="Gmail" className="btn-icon" />
+                Mail Me
+              </>
+            }
+            type="primary"
+            onClick={() => (window.location.href = `mailto:${email}`)}
+          />
 
-          <a
-            href={linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-btn linkedin-btn"
-          >
-            <img src={linkedinLogo} alt="LinkedIn" className="linkedin-icon" />
-            LinkedIn
-          </a>
+          <Button
+            text={
+              <>
+                <img src={linkedinLogo} alt="LinkedIn" className="btn-icon" />
+                LinkedIn
+              </>
+            }
+            type="primary"
+            onClick={() => window.open(linkedinUrl, "_blank")}
+          />
         </div>
       </GlassCard>
     </div>
