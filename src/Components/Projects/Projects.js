@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
 import Button from "../../Elements/Button/Button";
-import { languages, frameworks } from "../Skills/Data/skillsData";
+import { languages, frameworks } from "../Skills/skillsData";
 import projectsData from "./projectsData";
 import "./Projects.css";
 

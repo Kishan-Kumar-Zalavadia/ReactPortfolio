@@ -1,6 +1,6 @@
 import React from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
-import { languages, frameworks, concepts, softSkills } from "./Data/skillsData";
+import { languages, frameworks, concepts, softSkills } from "./skillsData";
 import "./Skills.css";
 import Heading from "../../Elements/Heading/Heading";
 

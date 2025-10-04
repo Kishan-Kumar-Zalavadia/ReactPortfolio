@@ -3,7 +3,7 @@ import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
 import Button from "../../Elements/Button/Button"; // Import your custom Button
 import experienceData from "./experienceData";
-import { languages, frameworks } from "../Skills/Data/skillsData";
+import { languages, frameworks } from "../Skills/skillsData";
 import "./Experience.css";
 
 // Utility: get image for skill
