@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
@@ -7,30 +6,10 @@ import Education from "./Components/Education/Education";
 import Experiences from "./Components/Experience/Experience";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
+import ScrollToTop from "./Elements/ScrollToTop/ScrollToTop";
 import ScrollIndicator from "./Elements/ScrollIndicator/ScrollIndicator";
 
 const App = () => {
-  const [showScroll, setShowScroll] = useState(false);
-
-  // Show button when scrolling down
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) setShowScroll(true);
-      else setShowScroll(false);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Scroll to top function
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <div className="main-container">
       <ScrollIndicator />
@@ -41,12 +20,7 @@ const App = () => {
       <Experiences />
       <Projects />
       <Contact />
-
-      {showScroll && (
-        <div className="scroll-top" onClick={scrollToTop}>
-          <div className="up-arrow"></div>
-        </div>
-      )}
+      <ScrollToTop />
     </div>
   );
 };
