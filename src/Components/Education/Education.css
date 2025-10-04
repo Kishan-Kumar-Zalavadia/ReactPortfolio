@@ -239,24 +239,3 @@
   justify-content: center;
   margin-bottom: 20px;
 }
-
-/* Individual course pill */
-.modal-content .course-pill {
-  padding: 8px 14px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid var(--card-border);
-  font-size: 0.9rem;
-  color: var(--text-color);
-  font-weight: 500;
-  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-
-/* Hover effect for course pills */
-.modal-content .course-pill:hover {
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 6px 15px var(--card-shadow);
-  color: var(--link-hover);
-}

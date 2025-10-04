@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Button from "../../Elements/Button/Button";
+import Badge from "../../Elements/Badge/Badge";
 import "./Education.css";
 import Heading from "../../Elements/Heading/Heading";
 
@@ -65,9 +66,7 @@ const Education = () => {
 
             <div className="courses-list">
               {courses.map((course, index) => (
-                <div key={index} className="course-pill">
-                  {course}
-                </div>
+                <Badge key={index} text={course} />
               ))}
             </div>
 
