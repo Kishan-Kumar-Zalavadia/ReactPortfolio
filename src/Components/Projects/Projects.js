@@ -47,23 +47,27 @@ const Projects = () => {
       <div className="projects-grid">
         {displayedProjects.map((project, index) => (
           <GlassCard key={index} className="project-card">
-            <img
-              src={project.image}
-              alt={project.name}
-              className="project-image"
-            />
-            <h3 className="project-title">{project.name}</h3>
+            <div className="project-content">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="project-image"
+              />
+              <h3 className="project-title">{project.name}</h3>
 
-            <div className="project-tech">
-              {project.technologies.map((tech, i) => {
-                const img = getSkillImage(tech);
-                return (
-                  <div key={i} className="badge">
-                    {img && <img src={img} alt={tech} className="badge-icon" />}
-                    {tech}
-                  </div>
-                );
-              })}
+              <div className="project-tech">
+                {project.technologies.map((tech, i) => {
+                  const img = getSkillImage(tech);
+                  return (
+                    <div key={i} className="badge">
+                      {img && (
+                        <img src={img} alt={tech} className="badge-icon" />
+                      )}
+                      {tech}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="project-buttons">
