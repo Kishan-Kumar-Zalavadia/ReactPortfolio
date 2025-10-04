@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
+import Button from "../../Elements/Button/Button"; // Import your custom Button
 import experienceData from "./experienceData";
 import { languages, frameworks } from "../Skills/Data/skillsData";
 import "./Experience.css";
@@ -70,12 +71,13 @@ const Experience = () => {
                 </div>
               </div>
 
-              <button
-                className="details-btn"
+              {/* Use custom Button component */}
+              <Button
+                className="full-width"
                 onClick={() => setActiveExperience(exp)}
-              >
-                View Details
-              </button>
+                type="primary"
+                text="View Details"
+              />
             </GlassCard>
           </div>
         ))}
@@ -84,9 +86,12 @@ const Experience = () => {
       {/* Toggle button for more/less */}
       {experienceData.length > 3 && (
         <div style={{ textAlign: "center", marginTop: "20px" }}>
-          <button className="details-btn" onClick={() => setShowAll(!showAll)}>
-            {showAll ? "View Less" : "View More"}
-          </button>
+          <Button
+            onClick={() => setShowAll(!showAll)}
+            type="primary"
+            className="full-width"
+            text={showAll ? "View Less" : "View More"}
+          />
         </div>
       )}
 
@@ -108,12 +113,13 @@ const Experience = () => {
                 <li key={i}>{point}</li>
               ))}
             </ul>
-            <button
-              className="close-btn"
+            {/* Close button uses secondary style */}
+            <Button
               onClick={() => setActiveExperience(null)}
-            >
-              Close
-            </button>
+              type="secondary"
+              className="full-width"
+              text="Close"
+            />
           </div>
         </div>
       )}
