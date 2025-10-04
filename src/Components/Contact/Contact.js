@@ -10,7 +10,7 @@ const Contact = () => {
   const linkedinUrl = "https://www.linkedin.com/in/kishan-kumar-zalavadia/";
 
   return (
-    <div className="contact-section">
+    <div className="contact-section" id='contact-me'>
       <Heading title={"Contact Me"} />
       <GlassCard>
         <p className="contact-note">

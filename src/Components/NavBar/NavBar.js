@@ -23,7 +23,7 @@ const NavBar = () => {
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact Me</a>
+        <a href="#contact-me">Contact Me</a>
       </div>
 
       {/* Hamburger menu button (visible on mobile) */}
@@ -52,7 +52,7 @@ const NavBar = () => {
           <a href="#certifications" onClick={toggleMenu}>
             Certifications
           </a>
-          <a href="#contact" onClick={toggleMenu}>
+          <a href="#contact-me" onClick={toggleMenu}>
             Contact Me
           </a>
         </div>
