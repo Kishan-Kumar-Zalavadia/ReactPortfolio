@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
 import Button from "../../Elements/Button/Button";
+import Badge from "../../Elements/Badge/Badge";
 import { languages, frameworks } from "../Skills/skillsData";
 import projectsData from "./projectsData";
 import "./Projects.css";
@@ -59,14 +60,7 @@ const Projects = () => {
               <div className="project-tech">
                 {project.technologies.map((tech, i) => {
                   const img = getSkillImage(tech);
-                  return (
-                    <div key={i} className="badge">
-                      {img && (
-                        <img src={img} alt={tech} className="badge-icon" />
-                      )}
-                      {tech}
-                    </div>
-                  );
+                  return <Badge key={i} text={tech} img={img} />;
                 })}
               </div>
             </div>
@@ -123,12 +117,7 @@ const Projects = () => {
             <div className="modal-badges">
               {activeProject.technologies.map((tech, i) => {
                 const img = getSkillImage(tech);
-                return (
-                  <div key={i} className="badge">
-                    {img && <img src={img} alt={tech} className="badge-icon" />}
-                    {tech}
-                  </div>
-                );
+                return <Badge key={i} text={tech} img={img} />;
               })}
             </div>
 
