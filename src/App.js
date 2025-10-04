@@ -8,6 +8,7 @@ import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import ScrollToTop from "./Elements/ScrollToTop/ScrollToTop";
 import ScrollIndicator from "./Elements/ScrollIndicator/ScrollIndicator";
+import SocialIcons from "./Elements/SocialIcons/SocialIcons";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <Projects />
       <Contact />
       <ScrollToTop />
+      <SocialIcons />
     </div>
   );
 };
