@@ -16,6 +16,10 @@ const NavBar = () => {
   useEffect(() => {
     const root = document.documentElement;
     if (darkMode) {
+      root.style.setProperty(
+        "----main-gradient",
+        "135deg,#0f0f0f,#1a1a1a,#000000,#141e30,#243b55"
+      );
       root.style.setProperty("--bg-color", "#000000");
       root.style.setProperty("--text-color", "#ffffff");
       root.style.setProperty("--link-color", "#66b2ff");
@@ -24,13 +28,17 @@ const NavBar = () => {
       root.style.setProperty("--card-border", "rgba(255, 255, 255, 0.15)");
       root.style.setProperty("--card-shadow", "rgba(0, 0, 0, 0.6)");
     } else {
-      root.style.setProperty("--bg-color", "#ffffff");
-      root.style.setProperty("--text-color", "#000000");
-      root.style.setProperty("--link-color", "#0066cc");
-      root.style.setProperty("--link-hover", "#3399ff");
-      root.style.setProperty("--card-bg", "rgba(211, 211, 211, 0.05)");
-      root.style.setProperty("--card-border", "rgba(202, 202, 202, 0.1)");
-      root.style.setProperty("--card-shadow", "rgba(210, 210, 210, 0.3)");
+      root.style.setProperty(
+        "--main-gradient",
+        "linear-gradient(135deg, #ffffff, #f0f0f0, #e0e0e0, #cde1ff, #a0c4ff)"
+      );
+      root.style.setProperty("--bg-color", "#fdfdfd"); // main background
+      root.style.setProperty("--text-color", "#1a1a1a"); // readable text
+      root.style.setProperty("--link-color", "#1a73e8"); // normal link
+      root.style.setProperty("--link-hover", "#0c59d1"); // hover link
+      root.style.setProperty("--card-bg", "rgba(255, 255, 255, 0.3)"); // semi-transparent glass
+      root.style.setProperty("--card-border", "rgba(0, 0, 0, 0.1)"); // subtle border
+      root.style.setProperty("--card-shadow", "rgba(0, 0, 0, 0.15)"); // soft shadow
     }
   }, [darkMode]);
 

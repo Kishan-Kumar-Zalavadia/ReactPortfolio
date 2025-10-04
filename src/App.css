@@ -132,6 +132,14 @@ footer p {
 } */
 
 :root {
+  --main-gradient: linear-gradient(
+    135deg,
+    #0f0f0f,
+    #1a1a1a,
+    #000000,
+    #141e30,
+    #243b55
+  );
   --bg-color: #000000; /* main background */
   --text-color: #ffffff; /* default text */
   --link-color: #66b2ff; /* link normal */
@@ -170,15 +178,7 @@ a:hover {
   margin: 10px; /* added margin */
   overflow-x: hidden;
   overflow-y: auto;
-
-  background: linear-gradient(
-    135deg,
-    #0f0f0f,
-    #1a1a1a,
-    #000000,
-    #141e30,
-    #243b55
-  );
+  background: var(--main-gradient);
   background-size: 400% 400%;
   background-attachment: fixed;
 
@@ -201,12 +201,12 @@ ul {
 li {
   list-style-type: none;
   text-align: justify;
-  text-justify: inter-word; 
+  text-justify: inter-word;
 }
 
 p {
   text-align: justify;
-  text-justify: inter-word; 
+  text-justify: inter-word;
 }
 
 /* Scroll Top */
