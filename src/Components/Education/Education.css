@@ -59,12 +59,12 @@
 
 /* Latest card highlight */
 .latest-card .education-card {
-  border: 1px solid #00ffcc;
-  box-shadow: 0 0 18px rgba(0, 255, 200, 0.4);
+  border: 1px solid var(--primary-glow);
+  box-shadow: 0 0 18px var(--primary-glow);
 }
 
 .latest-badge {
-  background: linear-gradient(135deg, #00ffcc, #0066ff);
+  background: linear-gradient(135deg, var(--primary-glow), var(--link-color));
   color: var(--bg-color);
   font-size: 0.8rem;
   font-weight: bold;
@@ -92,7 +92,7 @@
 
 .courses-popup {
   margin-top: 15px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 15px;
   border-radius: 12px;
   border: 1px solid var(--card-border);
@@ -157,7 +157,7 @@
   inset: 0;
   background: radial-gradient(
     circle at top right,
-    rgba(0, 255, 204, 0.15),
+    var(--primary-glow),
     transparent 60%
   );
   pointer-events: none;
@@ -207,7 +207,7 @@
 
 .close-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 102, 255, 0.5);
+  box-shadow: 0 6px 15px var(--primary-glow);
 }
 
 /* Animations */

@@ -17,8 +17,8 @@ const NavBar = () => {
     const root = document.documentElement;
     if (darkMode) {
       root.style.setProperty(
-        "----main-gradient",
-        "135deg,#0f0f0f,#1a1a1a,#000000,#141e30,#243b55"
+        "--main-gradient",
+        "linear-gradient(135deg, #0f0f0f, #1a1a1a, #000000, #141e30, #243b55)"
       );
       root.style.setProperty("--bg-color", "#000000");
       root.style.setProperty("--text-color", "#ffffff");
