@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import "./NavBar.css";
 import profileLogo from "../../component-old/pic/logo.jpeg";
@@ -6,8 +6,33 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  // Update CSS variables based on mode
+  useEffect(() => {
+    const root = document.documentElement;
+    if (darkMode) {
+      root.style.setProperty("--bg-color", "#000000");
+      root.style.setProperty("--text-color", "#ffffff");
+      root.style.setProperty("--link-color", "#66b2ff");
+      root.style.setProperty("--link-hover", "#99ccff");
+      root.style.setProperty("--card-bg", "rgba(255, 255, 255, 0.08)");
+      root.style.setProperty("--card-border", "rgba(255, 255, 255, 0.15)");
+      root.style.setProperty("--card-shadow", "rgba(0, 0, 0, 0.6)");
+    } else {
+      root.style.setProperty("--bg-color", "#ffffff");
+      root.style.setProperty("--text-color", "#000000");
+      root.style.setProperty("--link-color", "#0066cc");
+      root.style.setProperty("--link-hover", "#3399ff");
+      root.style.setProperty("--card-bg", "rgba(211, 211, 211, 0.05)");
+      root.style.setProperty("--card-border", "rgba(202, 202, 202, 0.1)");
+      root.style.setProperty("--card-shadow", "rgba(210, 210, 210, 0.3)");
+    }
+  }, [darkMode]);
 
   return (
     <GlassCard className="navbar">
@@ -22,13 +47,43 @@ const NavBar = () => {
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
         <a href="#contact-me">Contact Me</a>
+
+        {/* Dark Mode Toggle for Desktop */}
+        <div className="dark-mode-toggle">
+          <label className="switch">
+            <input
+              type="checkbox"
+              checked={darkMode}
+              onChange={toggleDarkMode}
+            />
+            <span className="slider">
+              <span className="icon dark">🌙</span>
+              <span className="icon light">☀️</span>
+            </span>
+          </label>
+        </div>
       </div>
 
-      {/* Hamburger menu button (visible on mobile) */}
-      <div className="hamburger" onClick={toggleMenu}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
+      {/* Hamburger menu & mobile toggle */}
+      <div className="hamburger-and-toggle">
+        <div className="mobile-toggle">
+          <label className="switch">
+            <input
+              type="checkbox"
+              checked={darkMode}
+              onChange={toggleDarkMode}
+            />
+            <span className="slider">
+              <span className="icon dark">🌙</span>
+              <span className="icon light">☀️</span>
+            </span>
+          </label>
+        </div>
+
+        <div className="hamburger" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
 
       {/* Mobile dropdown menu */}
@@ -48,9 +103,6 @@ const NavBar = () => {
           </a>
           <a href="#projects" onClick={toggleMenu}>
             Projects
-          </a>
-          <a href="#certifications" onClick={toggleMenu}>
-            Certifications
           </a>
           <a href="#contact-me" onClick={toggleMenu}>
             Contact Me
