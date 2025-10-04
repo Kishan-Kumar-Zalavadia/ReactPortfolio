@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
+import Button from "../../Elements/Button/Button";
 import "./Education.css";
 import Heading from "../../Elements/Heading/Heading";
 
@@ -36,12 +37,7 @@ const Education = () => {
               Master of Science, Computer Science (Aug 2023 – May 2025)
             </p>
             <p className="gpa">GPA: 4/4</p>
-            <button
-              className="courses-btn"
-              onClick={() => setShowCourses(true)}
-            >
-              View Courses
-            </button>
+            <Button text="View Courses" onClick={() => setShowCourses(true)} />
           </GlassCard>
         </div>
 
@@ -75,9 +71,11 @@ const Education = () => {
               ))}
             </div>
 
-            <button className="close-btn" onClick={() => setShowCourses(false)}>
-              Close
-            </button>
+            <Button
+              text="Close"
+              onClick={() => setShowCourses(false)}
+              type="secondary"
+            />
           </div>
         </div>
       )}

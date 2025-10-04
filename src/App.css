@@ -139,6 +139,10 @@ footer p {
   --card-bg: rgba(255, 255, 255, 0.08); /* glass background */
   --card-border: rgba(255, 255, 255, 0.15);
   --card-shadow: rgba(0, 0, 0, 0.6);
+  --secondary-color: rgba(220, 53, 69, 0.15);
+  --secondary-hover: rgba(220, 53, 69, 0.35);
+  --primary-glow: rgba(102, 178, 255, 0.6);
+  --primary-tint: rgba(102, 178, 255, 0.1);
 }
 
 body {
