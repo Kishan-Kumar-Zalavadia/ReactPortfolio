@@ -2,7 +2,7 @@ import React from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import Heading from "../../Elements/Heading/Heading";
 import "./Home.css";
-import profilePicture from "../../component-old/pic/hero.jpeg";
+import profilePicture from "./hero.jpeg";
 
 const Home = () => {
   return (

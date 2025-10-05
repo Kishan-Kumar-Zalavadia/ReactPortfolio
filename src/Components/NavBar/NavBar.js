@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GlassCard from "../../Elements/GlassCard/GlassCard";
 import "./NavBar.css";
-import profileLogo from "../../component-old/pic/logo.jpeg";
+import profileLogo from "./logo.jpeg";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar = () => {
