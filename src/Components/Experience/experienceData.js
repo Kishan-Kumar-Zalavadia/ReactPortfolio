@@ -1,5 +1,18 @@
 const experienceData = [
   {
+    company: "Paycom",
+    role: "Software Developer (Full-time)",
+    location: "Texas, USA",
+    duration: "June 2025 – Present",
+    latest: true,
+    skills: ["PHP", "ReactJS", "MySQL", "ASP.NET", "GitLab"],
+    highlights: [
+      "Develop and implement new system features to enhance functionality and improve user experience within Paycom’s enterprise platform.",
+      "Diagnose, debug, and resolve software issues and performance bottlenecks while addressing security vulnerabilities to maintain system reliability and integrity.",
+      "Design and execute comprehensive test cases to validate functionality of cross-team development projects, ensuring seamless integration and bug-free deployment.",
+    ],
+  },
+  {
     company: "UNT",
     role: "Research Assistant (Part-time)",
     location: "Texas, USA",
