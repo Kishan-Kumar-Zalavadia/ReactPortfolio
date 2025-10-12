@@ -17,7 +17,7 @@ const experienceData = [
     role: "Research Assistant (Part-time)",
     location: "Texas, USA",
     duration: "Jan 2024 – May 2025",
-    latest: true,
+    latest: false,
     skills: ["Material Science", "Python", "Machine Learning"],
     highlights: [
       "Engaged in material science research, analyzing stress, strain, and hardening rate in alloys, focusing on advanced curve path predictions.",
