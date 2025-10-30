@@ -11,6 +11,15 @@ import clockImg from "./ProjectImages/clock.jpg";
 
 const projectsData = [
   {
+    name: "AI-Powered Git Commit Message Generator",
+    image: expenseTrackerImg,
+    link: "",
+    github: "https://github.com/Kishan-Kumar-Zalavadia/GenAI-Commit-Generator",
+    technologies: ["Python", "AI/ML", "LLM", "GenAI", "Git", "Error Recovery"],
+    description:
+      "Developed autonomous AI agent using GAME framework that parses git diffs across multiple files, auto-generates commit messages in custom format patterns, and reduces commit workflow time by 85% through intelligent code analysis and LLM function calling. Engineered production-grade system with 4-model fallback chain, exponential backoff retry, and real-time error recovery, achieving high reliability while processing complex multi-file changesets",
+  },
+  {
     name: "Expense Tracker",
     image: expenseTrackerImg,
     link: "",
