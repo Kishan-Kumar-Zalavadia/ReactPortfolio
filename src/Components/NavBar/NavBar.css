@@ -48,19 +48,88 @@
 }
 
 /* Mobile menu */
+/* Redesigned Mobile Menu */
 .mobile-menu {
   position: absolute;
   top: 70px;
   right: 20px;
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  border-radius: 12px;
-  padding: 15px;
+  width: 200px;
+  background: var(--bg-color);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 25px var(--card-shadow);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 18px 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  animation: slideDown 0.3s ease;
+  gap: 10px;
+  animation: slideFadeIn 0.4s ease forwards;
+  overflow: hidden;
+  z-index: 999;
 }
+
+/* Menu Links */
+.mobile-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.mobile-menu a:hover {
+  background: var(--secondary-hover);
+  color: var(--link-hover);
+  box-shadow: 0 0 10px var(--primary-glow);
+  transform: translateX(4px);
+}
+
+/* Separator line between menu items (optional, remove if not needed) */
+.mobile-menu a:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Entrance Animation */
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Exit Animation (if you use JS to hide it later) */
+@keyframes slideFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.97);
+  }
+}
+
+/* Optional Glow Border Effect */
+.mobile-menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(120deg, var(--link-color), var(--secondary-hover));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
 
 .mobile-menu a {
   color: var(--text-color);
