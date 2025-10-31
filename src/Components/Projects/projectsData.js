@@ -8,11 +8,12 @@ import expenseTrackerImg from "./ProjectImages/expenseTracker.jpg";
 import weatherAppImg from "./ProjectImages/weatherApp.jpg";
 import ticTacToeImg from "./ProjectImages/tic-tac-toe.jpg";
 import clockImg from "./ProjectImages/clock.jpg";
+import commitGenAI from "./ProjectImages/commit-genai.png"
 
 const projectsData = [
   {
     name: "AI-Powered Git Commit Message Generator",
-    image: expenseTrackerImg,
+    image: commitGenAI,
     link: "",
     github: "https://github.com/Kishan-Kumar-Zalavadia/GenAI-Commit-Generator",
     technologies: ["Python", "AI/ML", "LLM", "GenAI", "Git", "Error Recovery"],
