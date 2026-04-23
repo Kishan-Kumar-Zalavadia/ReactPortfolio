@@ -73,7 +73,7 @@ const experienceData = [
     company: "LTIMindtree",
     role: "Software Engineer (Full-time)",
     location: "Hyderabad, India",
-    duration: "Sep 2022 – Jul 2023",
+    duration: "Jun 2022 – Jul 2023",
     latest: false,
     skills: ["Spring Boot", "Angular", "MySQL", "Web Development", "Agile"],
     highlights: [
@@ -83,10 +83,10 @@ const experienceData = [
     ],
   },
   {
-    company: "Mindtree",
+    company: "LTIMindtree",
     role: "Java Developer (Internship)",
     location: "Hyderabad, India",
-    duration: "Mar 2022 – Jun 2022",
+    duration: "Feb 2022 – Jun 2022",
     latest: false,
     skills: ["Java", "Spring Boot", "Angular", "MySQL", "HTML", "CSS", "Agile"],
     highlights: [
