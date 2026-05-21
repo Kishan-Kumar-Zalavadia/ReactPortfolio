@@ -14,6 +14,8 @@ import aspnetImg from "./skillsImages/dotnet.png";
 import gitImg from "./skillsImages/git.png";
 import githubImg from "./skillsImages/github.png";
 import gitlabImg from "./skillsImages/gitlab.png";
+import phpImg from "./skillsImages/php.png";
+import cSharp from "./skillsImages/c-sharp.png";
 
 // Arrays
 export const languages = [
@@ -24,6 +26,8 @@ export const languages = [
   { name: "CSS", img: cssImg },
   { name: "SCSS", img: scssImg },
   { name: "SQL (MySQL)", img: sqlImg },
+  { name: "PHP", img: phpImg },
+  { name: "C Sharp", img: cSharp },
 ];
 
 export const frameworks = [

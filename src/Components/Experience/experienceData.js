@@ -3,7 +3,7 @@ const experienceData = [
     company: "Paycom",
     role: "Software Developer (Full-time)",
     location: "Texas, USA",
-    duration: "June 2025 – Present",
+    duration: "June 2025 – May 2026",
     latest: true,
     skills: ["PHP", "ReactJS", "MySQL", "ASP.NET", "GitLab"],
     highlights: [

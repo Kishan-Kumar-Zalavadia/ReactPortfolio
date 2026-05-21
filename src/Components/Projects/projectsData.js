@@ -9,8 +9,28 @@ import weatherAppImg from "./ProjectImages/weatherApp.jpg";
 import ticTacToeImg from "./ProjectImages/tic-tac-toe.jpg";
 import clockImg from "./ProjectImages/clock.jpg";
 import commitGenAI from "./ProjectImages/commit-genai.png"
+import proofi from "./ProjectImages/proofi.png";
+import ledgerImg from "./ProjectImages/Ledger.png";
 
 const projectsData = [
+  {
+    name: "Ledger Finance",
+    image: ledgerImg,
+    link: "https://ledger-finance-hub.vercel.app/",
+    github: "https://github.com/Kishan-Kumar-Zalavadia/Expense_Tracker",
+    technologies: ["ReactJS", "Vercel", "Vite", "Supabase", "GitHub"],
+    description:
+      "An expense tracking application to manage daily expenses and income, featuring visualizations with charts and category-wise summaries.",
+  },
+  {
+    name: "Proofi AI",
+    image: proofi,
+    link: "proofihub.vercel.app",
+    github: "https://github.com/Proofi-AI/CertificationHub",
+    technologies: ["ReactJS", "Vercel", "Vite", "Supabase", "GitHub"],
+    description:
+      "A single place to store all the websites and badges with official verification",
+  },
   {
     name: "AI-Powered Git Commit Message Generator",
     image: commitGenAI,
@@ -19,15 +39,6 @@ const projectsData = [
     technologies: ["Python", "AI/ML", "LLM", "GenAI", "Git", "Error Recovery"],
     description:
       "Developed autonomous AI agent using GAME framework that parses git diffs across multiple files, auto-generates commit messages in custom format patterns, and reduces commit workflow time by 85% through intelligent code analysis and LLM function calling. Engineered production-grade system with 4-model fallback chain, exponential backoff retry, and real-time error recovery, achieving high reliability while processing complex multi-file changesets",
-  },
-  {
-    name: "Expense Tracker",
-    image: expenseTrackerImg,
-    link: "",
-    github: "https://github.com/Kishan-Kumar-Zalavadia/Expense_Tracker",
-    technologies: ["Html", "css", "Javascript"],
-    description:
-      "An expense tracking application to manage daily expenses and income, featuring visualizations with charts and category-wise summaries.",
   },
   {
     name: "Tic-Tac-Toe Game",
