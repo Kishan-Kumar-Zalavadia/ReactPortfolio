@@ -25,7 +25,7 @@ const projectsData = [
   {
     name: "Proofi AI",
     image: proofi,
-    link: "proofihub.vercel.app",
+    link: "https://proofihub.vercel.app/",
     github: "https://github.com/Proofi-AI/CertificationHub",
     technologies: ["ReactJS", "Vercel", "Vite", "Supabase", "GitHub"],
     description:
