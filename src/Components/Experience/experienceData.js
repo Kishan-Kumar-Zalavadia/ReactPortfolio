@@ -1,5 +1,17 @@
 const experienceData = [
   {
+    company: "DataVinci",
+    role: "Web Analytics Developer (Full-time)",
+    location: "Remote, India",
+    duration: "September 2026 – Present",
+    latest: true,
+    skills: ["JavaScript", "Google Analytics", "Tag Manager"],
+    highlights: [
+      "Implement web analytics platforms (Google Analytics, Adobe Analytics) and develop custom JavaScript tracking scripts and tags in Google Tag Manager, testing and debugging for accurate data collection across websites and apps.",
+      "Build dashboards, integrate analytics with CRM platforms via SQL/JavaScript, and support A/B tests with cross-functional teams.",
+    ],
+  },
+  {
     company: "Paycom",
     role: "Software Developer (Full-time)",
     location: "Texas, USA",
